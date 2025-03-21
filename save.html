@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="save.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <header class="hero">
+
+        <div class="topnav">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+           
+            <a href="data.html">DATA</a>
+            <a href="members.html">MEMBERS</a>
+        </div>
+    
+        <div class="la">
+        <div class="hero-content" data-aos="fade-up">
+            <h2 style="font-size: 5rem;" data-aos="fade-up">Saving our Ecosystem</h2>
+            <p  data-aos="fade-up" data-aos-delay="200" style="color: white; margin-top: 20px; margin-bottom: 20px;">Explore different ways on how we can help conserve the tropical rainforest ecosystem.</p>
+            <a href=".hero-section" class="scroll" data-aos="fade-up" data-aos-delay="400">Explore Now</a>
+        </div>
+    </header>
+
+
+    <section class="hero-section" data-aos="fade-up">
+        <div class="hero-container">
+          <!-- Left Text Content -->
+          <div class="hero-text">
+            <h1 data-aos="fade-up" data-aos-delay="100">
+              Revive. Restore. Regrow.
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+                Join us in protecting our planet’s future—one tree, one action, and one step at a time. Together, we can heal Earth’s ecosystems and build a greener, more sustainable world. Change doesn’t happen overnight, but with united effort and enduring care, we can restore the balance of nature and ensure a thriving planet for generations to come.
+            </p>
+
+          </div>
+      
+          <!-- Right Image -->
+          <div class="hero-image" data-aos="fade-up">
+            <img src="grow.jpg" alt="Plant growing" data-aos="fade-up">
+          </div>
+        </div>
+      </section>
+
+      <section class="q">
+        <div class="continer" data-aos="fade-up">
+            <h1>Eventually we'll realize that
+                <br>
+                 if we destroy the ecosystem, 
+                 <br>we destroy ourselves.
+                <br>
+                <span class="author" data-aos="fade-up" data-aos-delay="200">- Jonas Salk</span>
+            </h1>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="section-header">
+          <h2 data-aos="fade-up">What we can do to help</h2>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Discover simple actions we can all take — from reducing waste to raising awareness — to help protect the rainforest, its animals, and the anyone who call it home.
+          </p>
+        </div>
+      
+        <div class="swiper services-swiper">
+          <div class="swiper-wrapper" data-aos="fade-up">
+      
+            <!-- Card 1 -->
+            <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="200">
+              <img src="8.jpg" alt="Waste Management">
+              <h3>Stop Deforestation</h3>
+              <p>
+                Protect forests by supporting conservation laws, sustainable farming, and tree-planting efforts.
+              </p>
+            </div>
+      
+            <!-- Card 2 -->
+            <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="400">
+              <img src="9.jpg" alt="Forest Restoration">
+              <h3>Choose Sustainable Products</h3>
+              <p>
+                Buy eco-friendly products, avoid unsustainable palm oil, and eat less beef to reduce forest damage.
+              </p>
+            </div>
+      
+            <!-- Card 3 -->
+            <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="600">
+              <img src="10.jpg" alt="Sustainable Agriculture">
+              <h3>Dispose Waste Responsibly</h3>
+              <p>
+                Always put waste in the right bin to keep the environment clean and prevent pollution in rainforests.
+              </p>
+            </div>
+
+            <div class="swiper-slide service-card">
+                <img src="recycle.jpg" alt="Sustainable Agriculture">
+                <h3>Reduce, Reuse, Recycle</h3>
+                <p>
+                    Use fewer resources and recycle to lower wastes the demand for rainforest materials.
+                </p>
+              </div>
+
+              <div class="swiper-slide service-card">
+                <img src="13.jpg" alt="Sustainable Agriculture">
+                <h3>Spread Awareness</h3>
+                <p>
+                  Teach others about the importance of rainforests and how they can help save them.
+                </p>
+              </div>
+
+              <div class="swiper-slide service-card">
+                <img src="12.webp" alt="Sustainable Agriculture">
+                <h3>Donate or Volunteer</h3>
+                <p>
+                    Support rainforest conservation by donating to or volunteering with trusted environmental groups.
+                </p>
+              </div>
+      
+          </div>
+      
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <section id="c1" data-aos="fade-up">
+        <section id="database">
+          <h2>Add Your Comment:</h2>
+    
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter Your Name">
+          
+          <label for="age">Comment:</label>
+          <input type="text" id="comment" placeholder="Enter Your Comment">
+          <br>
+          <button onclick="addData()">Submit</button>
+        </section>
+        <section id="commentsection" data-aos="fade-up">
+          <h3>Comment Section</h3>
+          <table>
+              <thead>
+                  <tr>
+                      <th>No</th>
+                      <th>Name</th>
+                      <th>Comments</th>
+                  </tr>
+              </thead>
+              <tbody id="data-table">
+              </tbody>
+          </table>
+      
+          <script>
+              let database = [];
+      
+              // **Memuat data dari server**
+              async function loadDatabase() {
+                  try {
+                      const response = await fetch("data.php");
+                      database = await response.json();
+                      renderTable();
+                  } catch (error) {
+                      console.error("Gagal memuat data:", error);
+                  }
+              }
+      
+              // **Simpan data ke server**
+              async function saveDatabase() {
+                  try {
+                      await fetch("data.php", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify(database)
+                      });
+                  } catch (error) {
+                      console.error("Gagal menyimpan data:", error);
+                  }
+              }
+      
+              // **Menampilkan Data di Tabel**
+              function renderTable() {
+                  let tableBody = document.getElementById("data-table");
+                  tableBody.innerHTML = "";
+      
+                  database.forEach((item, index) => {
+                      let row = `<tr>
+                          <td>${index + 1}</td>
+                          <td>${item.name}</td>
+                          <td>${item.comment}</td>
+                      </tr>`;
+                      tableBody.innerHTML += row;
+                  });
+              }
+      
+              // **Menambahkan Data ke Database**
+              function addData() {
+                  let name = document.getElementById("name").value;
+                  let comment = document.getElementById("comment").value;
+      
+                  if (name === "" || comment === "") {
+                      alert("Nama dan usia harus diisi!");
+                      return;
+                  }
+      
+                  database.push({ name, comment });
+                  saveDatabase();
+                  renderTable();
+      
+                  document.getElementById("name").value = "";
+                  document.getElementById("comment").value = "";
+              }
+      
+              // **Menghapus Data**
+              function deleteData(index) {
+                  if (confirm("Yakin ingin menghapus data ini?")) {
+                      database.splice(index, 1);
+                      saveDatabase();
+                      renderTable();
+                  }
+              }
+      
+              // **Mengedit Data**
+              function editData(index) {
+                  let newName = prompt("Masukkan Nama Baru:", database[index].name);
+                  let newAge = prompt("Masukkan Usia Baru:", database[index].comment);
+      
+                  if (newName !== null && newAge !== null) {
+                      database[index].name = newName;
+                      database[index].comment = newAge;
+                      saveDatabase();
+                      renderTable();
+                  }
+              }
+      
+              // **Memuat data saat halaman pertama kali dibuka**
+              window.onload = loadDatabase;
+          </script>
+      
+        </section>
+      </section>
+        <style>
+
+          #c1 {
+            background-color: #344536;
+            height: auto;
+            padding: 40px;
+          }
+  #database {
+    
+    max-width: 900px;
+    
+    margin: 30px auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+   
+  }
+
+  #commentsection {
+    max-width: 1300px;
+    
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  
+  #database h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #2e7d32;
+  }
+
+  label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  input[type="text"] {
+    width: 85%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+ #comment {
+    width: 85%;
+    height: 100px;
+    padding: 10px;
+    padding-top: 0;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 18px;
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: #1b5e20;
+  }
+
+  /* Comment Section Styles */
+  #commentsection h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #3c4a37;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead {
+    background-color: #c8e6c9;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  td:nth-child(2) {
+    font-weight: bold;
+    color: #2e7d32;
+  }
+
+  td:nth-child(3) {
+    font-style: italic;
+  }
+
+        </style>
+
+      </div>
+      
+    <footer>
+        <p>&copy; 2025 Science Project - Tropical Rainforest</p>
+    </footer>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.services-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2
+            },
+            1024: {
+              slidesPerView: 3
+            }
+          }
+        });
+      </script>
+          <script>
+            document.querySelectorAll('a.scroll').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                  target.scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }
+              });
+            });
+          </script>
+          <!-- AOS Animation Library JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration in ms
+        once: true      // animation only once
+      });
+    </script>
+      
+</body>
+
+</html>

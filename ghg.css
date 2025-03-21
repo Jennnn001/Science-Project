@@ -1,0 +1,666 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  .topnav {
+      position: absolute; /* or use 'fixed' if you want it to stay while scrolling */
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      z-index: 1000; 
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 50px;
+      text-decoration: none;
+      font-size: 12px;
+      transition: 0.5s;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: rgba(252, 252, 252, 0.474);
+      color: rgb(24, 32, 24);
+      font-weight: bolder;
+      cursor: pointer;
+    }
+  
+    
+    
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                    url('https://wallpaperaccess.com/full/4148279.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    
+    .la {
+      margin-top: 300px;
+    }
+    
+    .hero-content {
+      font-size: 24px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+      }
+
+
+    .hero h2 span {
+      color: #c5e06f;
+    }
+    
+ /* Container grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+  }
+  
+  /* Card box */
+  .service-item {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image styling */
+  .service-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  
+  /* Title */
+  .service-item h3 {
+    font-size: 1.25rem;
+    margin: 16px 20px 8px;
+    color: #1a202c;
+  }
+  
+  /* Subtitle */
+  .service-item p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin: 0 20px 16px;
+    line-height: 1.5;
+  }
+  
+  /* Button */
+  .service-item a {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 10px 18px;
+    background-color: #42404071;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .service-item a:hover {
+    background-color: #2f855a;
+    transform: translateY(-1px);
+    color: white;
+  }
+
+    
+  .solar-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+    background-color: #f9fafb;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    margin-top: 50px;
+  
+  }
+  
+  /* Title & subtext */
+  .solar-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a202c;
+    margin-bottom: 10px;
+  }
+  
+  .solar-section .subtext {
+    text-align: center;
+    color: #4a5568;
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Responsive grid layout */
+  .grid-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Chart styling */
+  .chart-box {
+    flex: 1 1 400px;
+    min-width: 320px;
+  }
+  
+  .chart {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Text styling */
+  .text-box {
+    flex: 1 1 400px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #2d3748;
+  }
+  
+  .text-box p {
+    margin-bottom: 20px;
+  }
+
+
+
+  .swiper {
+    width: 80%; /* Adjust width as needed */
+    height: 300px; /* Increase height */
+    
+  }
+  
+  .swiper-scrollbar {
+    margin-top: 10px; /* Moves scrollbar down */
+  }
+  
+  /* Ensure each slide has proper spacing */
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 15px; /* Add spacing */
+  }
+  
+  /* Add gap between slides */
+  .swiper-wrapper {
+    gap: 30px; /* Ensures gap is applied */
+    
+  }
+
+#def {
+    height: 100vh;
+}
+
+#cause {
+    height: 85vh;
+    background-color: #1a202c;
+}
+
+.text-content {
+    position: relative;
+    overflow: hidden;
+        height: 300px; /* or whatever height works for your layout */
+ 
+  }
+  
+  .text-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .text-content:hover img {
+    transform: scale(1.05); /* subtle zoom on hover */
+  }
+  
+  .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .text-content:hover .overlay-text {
+    opacity: 1;
+  }
+
+
+  .swiper-header {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  .swiper-header h2 {
+    font-size: 2rem;
+    color: #c1c8d5;
+    margin-bottom: 10px;
+  }
+  
+  .swiper-header p {
+    font-size: 1rem;
+    color: #c6c8cb;
+  }
+
+.grid-container1 {
+    padding: 20px;
+
+}
+
+.deforestation-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.deforestation-header h3 {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 800;
+
+    color: #1f2937;
+    cursor: default;
+    padding: 20px 300px;
+    background: linear-gradient(to right, #c6f1d6, #eef1f5);
+    border-radius: 1rem;
+
+  }
+ 
+  .deforestation-header h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background-color: #10b981;
+    transition: width 0.3s ease-in-out;
+    border-radius: 4px;
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #10b981;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+ 
+  .deforestation-header h3:hover::after {
+    width: 100%;
+  }
+
+  
+  .deforestation-header p {
+    font-size: 1.2rem;
+    color: #4b5563;
+    margin-top: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.service-item p {
+    text-align: justify;
+}
+
+
+
+.service-grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+  }
+  
+  /* Card box */
+  .service-item2 {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    
+  }
+  
+  .service-item2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image styling */
+  .service-item2 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  
+  /* Title */
+  .service-item2 h3 {
+    font-size: 1.25rem;
+    margin: 16px 20px 8px;
+    color: #1a202c;
+  }
+  
+  /* Subtitle */
+  .service-item2 p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin: 0 20px 16px;
+    line-height: 1.5;
+  }
+  
+  /* Button */
+  .service-item2 a {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 10px 18px;
+    background-color: #42404071;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .service-item2 a:hover {
+    background-color: #2f855a;
+    transform: translateY(-1px);
+    color: white;
+  }
+.burning {
+    height: 135vh;
+}
+.burning-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  .burning-header h3 {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 800;
+
+    color: #1f2937;
+    cursor: default;
+    padding: 20px 300px;
+    background: linear-gradient(to right, #87c9cfa4, #c8daf05a);
+    border-radius: 1rem;
+
+  }
+ 
+  .burning-header h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background-color: #3088c2;
+    transition: width 0.3s ease-in-out;
+    border-radius: 4px;
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #3088c2;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+ 
+  .burning-header h3:hover::after {
+    width: 100%;
+  }
+
+  
+  .burning-header p {
+    font-size: 1.2rem;
+    color: #4b5563;
+    margin-top: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  .agriculture {
+    background-color: #1a202c;
+    height: 90vh;
+  }
+
+  .agriculture-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -40px;
+}
+  .agriculture-header h3 {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 800;
+
+    color: #2f3041;
+    cursor: default;
+    padding: 20px 300px;
+    background: linear-gradient(to right, #e9d6d4, #f3c7c7);
+    border-radius: 1rem;
+
+  }
+ 
+  .agriculture h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background-color: #d24a4a;
+    transition: width 0.3s ease-in-out;
+    border-radius: 4px;
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #d24a4a;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+ 
+  .agriculture h3:hover::after {
+    width: 100%;
+  }
+
+  
+  .agriculture p {
+    font-size: 1.2rem;
+    color: #878a90;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  .image-card {
+    position: relative;
+    width: 400px;     /* Increased width */
+    height: 460px;    /* Increased height */
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.4s ease;
+  }
+  
+  .image-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    border-radius: 16px;
+    pointer-events: none;
+  }
+  
+  .image-card:hover .overlay {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .overlay h3 {
+    margin-left: 50px;
+    font-size: 1.2rem;
+    margin-top: -40px;
+  }
+  
+  .overlay p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 45px;
+    text-align: justify;
+  }
+  
+  .grid-container5 {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 40px;                
+        padding: 40px 20px;       
+        max-width: 1400px;        
+        margin: 0 auto;           
+
+  }
+  
+
+  footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .swiper-header a {
+    
+    display: inline-block;
+    margin: 0 20px;
+    padding: 10px 18px;
+    background-color: #e1e1e1ba;
+    border: white;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .swiper-header a:hover {
+    background-color: #2f855a;
+    transform: translateY(-1px);
+    color: white;
+  }

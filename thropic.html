@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="thropic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.topnav {
+    position: absolute; /* or use 'fixed' if you want it to stay while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 1000; 
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.5s;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgba(252, 252, 252, 0.474);
+    color: rgb(24, 32, 24);
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  
+  
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://3.bp.blogspot.com/-Y0JPy-xhYM8/VZw5oRQYkBI/AAAAAAAAM5o/lctlJBWRsd0/s1600/animals-in-the-tropical.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+  
+  .hero-content {
+    font-size: 24px;
+  }
+
+  .hero-content p{
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+  .hero h2 span {
+    color: #c5e06f;
+  }
+
+
+
+.hero-content a {
+      display: inline-block;
+      margin: 0 20px;
+      padding: 10px 18px;
+      background-color: #ffffff3a;
+      color: rgb(255, 255, 255);
+      border: black 1px solid;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 20px;
+    }
+    
+.hero-content a:hover {
+  
+      background-color: #2ea338;
+      transform: translateY(-1px);
+      color: white;
+    }
+
+
+
+.grid-containertiga {
+    margin: 30px;
+    
+    }
+    
+    
+    .item img {
+    object-fit: cover;
+    }
+    
+    
+    #trophic-pyramid {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://wallpaperaccess.com/full/126062.png') center/cover no-repeat;
+      height: 120vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    
+    .pyramid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    
+    .level {
+      margin-top: 10px;
+      position: relative;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    
+    .level img {
+      width: 100%;
+      height: 130px;
+      display: block;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+    
+    
+    .level h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      font-size: 1.5em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+    
+    
+    .level:nth-child(1) { width: 250px; }
+    .level:nth-child(2) { width: 500px; }
+    .level:nth-child(3) { width: 750px; }
+    .level:nth-child(4) { width: 1000px; }
+    
+    
+    .box5 {
+     
+      background-color: rgba(255, 255, 255, 0.099);
+      width: 95%;
+      height: 800px;
+      backdrop-filter: blur(8px);
+      border: 2px solid rgba(255, 255, 255, 0.205) ;
+      border-radius: 30px;
+      box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.205);
+    }
+    
+    .titlethropic  h1 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      color: rgb(255, 255, 255);
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 15px;
+      transition: 0.5s;
+    }
+    
+    .titlethropic h2 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      color: rgb(255, 255, 255);
+      font-weight: 500;
+      letter-spacing: 8px;
+      font-size: 20px;
+    }
+    
+    .titlethropic {
+      margin: 40px;
+    }
+    
+    .level:hover .overlay {
+      opacity: 1;
+    }
+    
+    .level h2 {
+        font-family: 'Poppins', sans-serif;
+    }
+    .level .overlay p {
+      margin: 50px;
+      font-size: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .level:hover img {
+      transform: scale(1.05); 
+    }
+    
+    .overlay .button a {
+      text-decoration: none;
+      color: white;
+      background-color: green;
+      font-family: 'Poppins', sans-serif;
+    
+    }
+    .overlay .button a:hover {
+      text-decoration: none;
+      color: black;
+      background-color: white;
+      font-family: 'Poppins', sans-serif;
+    
+    }
+    
+    .overlay {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+   
+.overlay .button {
+  font-size: 20px;
+  background-color: green;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  text-decoration: none;
+  z-index: 2;
+  transition: 0.3s ease;
+}
+
+
+
+    
+    .foodweb {
+    background-color: #f3f7ed;
+    padding: 60px 40px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .hero-text {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .hero-text h1 {
+    font-size: 40px;
+    color: #1d3d2f;
+    font-weight: 800;
+    line-height: 1.3;
+    position: relative;
+    margin-left: 80px;
+  }
+  
+  .hero-text .highlight {
+    color: #1d3d2f;
+    display: inline;
+  }
+  
+  
+  .hero-text p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+    text-align: justify;
+    margin-left: 40px;
+  }
+
+  .hero-image {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <header class="hero">
+
+      <div class="topnav">
+        <div class="nav-left">
+          <a href="home.html">HOME</a>
+          <a href="thropic.html">DIVERSITY</a>
+          <a href="about.html">SAVING THE ECOSYSTEM</a>
+          <a href="members.html">MEMBERS</a>
+        </div>
+        <div class="nav-right">
+          <span class="project-logo">🔬 SCIENCE PROJECT</span>
+        </div>
+      </div>
+
+      <style>
+.project-logo {
+font-size: 16px;
+font-weight: bolder;
+color: #ffffff;
+white-space: nowrap;
+
+}
+
+
+
+
+.topnav {
+position: fixed;
+top: 0;
+left: 0;
+height: 30px;
+width: 95%;
+background-color: rgba(34, 70, 34, 0.44);
+padding: 14px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1000;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.nav-left,
+.nav-right {
+display: flex;
+align-items: center;
+gap: 30px;
+}
+
+
+
+
+.topnav a {
+position: relative;
+color: #f2f2f2;
+text-decoration: none;
+font-size: 14px;
+font-weight: 500;
+padding: 10px 16px;
+border-radius: 6px;
+transition: color 0.3s ease;
+overflow: hidden;
+}
+
+
+.topnav a::after {
+content: "";
+position: absolute;
+left: 50%;
+bottom: 4px;
+transform: translateX(-50%);
+width: 0%;
+height: 2px;
+background: #90b7ee;
+box-shadow: 0 0 8px #90ee90, 0 0 16px #90ee90;
+transition: width 0.4s ease;
+}
+
+
+.topnav a:hover::after {
+width: 100%;
+}
+
+
+.topnav a:hover {
+background-color: transparent;
+color: white;
+}
+</style>
+    
+        <div class="la">
+        <div class="hero-content" data-aos="fade-up">
+            <h2 style="font-size: 5rem;" data-aos="fade-up">Food Chain and The Thropic Level</h2>
+            <p  data-aos="fade-up" data-aos-delay="200" style="color: white; margin-top: 20px; margin-bottom: 20px;">Learn about food chain and the thropic level in the rainforest ecosystem.</p>
+            <a href=".foodweb" class="scroll" data-aos="fade-up" data-aos-delay="400">Explore Now</a>
+        </div>
+    </header>
+
+
+
+<section class="foodweb" data-aos="fade-up">
+        <div class="hero-container">
+          <!-- Left Text Content -->
+          <div class="hero-text">
+            <h1 data-aos="fade-up" data-aos-delay="100">
+                The Food Web
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+                In the rainforest food web, animals are connected through predator-prey relationships. At the top of the food chain is the jaguar, a powerful predator that feeds on several other animals in the ecosystem. It preys on the squirrel monkey, macaw, and even the small butterfly. The jaguar helps control the population of these animals and plays an important role in maintaining the balance of the rainforest.
+                <br>
+                Another predator in the web is the boa constrictor, a large snake that hunts animals like the sloth and the squirrel monkey. While the sloth moves slowly through the trees, it can become an easy target for the boa. Similarly, the agile squirrel monkey must stay alert to avoid being caught by either the jaguar or the boa constrictor.
+                <br>
+                The toucan, which is mostly known for eating fruit, is shown here as a scavenger. This means that instead of hunting live animals, it feeds on the remains of dead animals left behind by predators like the jaguar or the boa. By doing so, the toucan helps clean up the environment.
+            </p>
+
+          </div>
+      
+          <!-- Right Image -->
+          <div class="hero-image" data-aos="fade-up">
+            <img src="60.jpg" alt="Plant growing" data-aos="fade-up">
+          </div>
+        </div>
+      
+</section>
+
+
+    <section id="trophic-pyramid" data-aos="fade-up">
+        <div class="box5">
+            <div class="titlethropic">
+                <h1 data-aos="fade-up" data-aos-delay="100">THROPIC LEVEL</h1>
+                <h2 data-aos="fade-up" data-aos-delay="200">IN THE TROPICAL RAINFOREST</h2>
+            </div>
+            <div class="pyramid">
+                <div class="level" data-aos="fade-up" data-aos-delay="200">
+                    <h2>Tertiary Consumer</h2>
+                    <img src="jag.jpg" alt="Producer">
+                    <div class="overlay">
+                        <div class="button"><a href="#apex" class="scroll">LEARN MORE</a></div>
+                    </div>
+                </div>
+                <div class="level" data-aos="fade-up" data-aos-delay="200">
+                    <h2>Secondary Consumers</h2>
+                    <img src="gor.jpeg" alt="Primary Consumer">
+                    <div class="overlay">
+                        <div class="button"><a href="#secondary" class="scroll">LEARN MORE</a></div>
+                    </div>
+                </div>
+                <div class="level" data-aos="fade-up" data-aos-delay="200">
+                    <h2>Primary Consumers</h2>
+                    <img src="touca.jpg" alt="Secondary Consumer">
+                    <div class="overlay">
+                        <div class="button"><a href="#primary" class="scroll">LEARN MORE</a></div>
+                    </div>
+                </div>
+                <div class="level" data-aos="fade-up" data-aos-delay="200">
+                    <h2>Producers</h2>
+                    <img src="producer.jpg" alt="Tertiary Consumer">
+                    <div class="overlay">
+                        <div class="button"><a href="#producer" class="scroll">LEARN MORE</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        #producer {
+   margin-top: 100px;
+   height: 90vh;
+   background-color: #ecf4ec;
+  }
+  
+  .grid-container1 {
+    display: grid;
+    grid-template-columns: 60% 40%; 
+    gap: 20px; 
+    align-items: center;
+    
+  }
+  
+  .grid-item1 {
+    width: 100%; 
+  }
+  
+  .owl-carousel {
+    max-width: auto;
+    
+  }
+  
+
+  
+  .grid-item1 h2 {
+    font-size: 2.5rem; 
+    font-weight: 800;
+    color: #1B5E20;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    
+  }
+  
+  .grid-item1 p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+    margin-right: 70px !important;
+  }
+    </style>
+    <section id="producer" data-aos="fade-up">
+            <div class="grid-container1" data-aos="fade-up">
+                <div class="grid-item1">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="wu.jpg" alt="">
+                            <div class="overlay2">
+                                <h2>Kapok Tree <span class="scientific"></span></h2>
+                               
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="yi.jpg" alt="">
+                            <div class="overlay2">
+                                <h2>Cacao <span class="scientific"></span></h2>
+                              
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="si.jpg" alt="">
+                            <div class="overlay2">
+                                <h2>Bromelia <span class="scientific"></span></h2>
+                              
+                            </div>
+                        </div>  
+                    </div>
+        <style>
+.owl-carousel .item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.overlay2 {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 50%;
+  height: 20%;
+  margin-bottom: 30px;
+ background-color: rgba(0, 0, 0, 0.337);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: bottom 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 0 0 16px 16px;
+margin-left: 30px;
+}
+
+.overlay2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: white;
+}
+
+
+
+.item:hover .overlay2 {
+  bottom: 0;
+}
+
+.item:hover img {
+  transform: scale(1.05);
+}
+
+        </style>
+                    <style>
+                        .owl-carousel .item img {
+                            width: 85%;        
+                            margin-left: 30px; 
+                            height: 500px;        
+                            object-fit: cover;    
+                            border-radius: 10px;  
+                            margin-top: 50px;
+                            margin-bottom: 30px;
+                        }
+        
+                    </style>
+                </div>
+                
+                <div class="grid-item1">
+                   <h2 data-aos="fade-up">PRODUCERS</h2>
+                   <p data-aos-delay="fade-up" data-aos-delay="100" style="text-align: justify; margin-right: 20px; margin-bottom: 20px;" >Producers are the foundation of the rainforest ecosystem. These are mainly green plants, such as trees, shrubs, vines, ferns, and mosses, that create their own food through a process called photosynthesis. By using sunlight, carbon dioxide from the air, and water from the soil, producers convert light energy into chemical energy in the form of glucose. This not only fuels the plant’s own growth but also provides energy for all other organisms in the food chain.
+                        <br>
+                    In the rainforest, the dense canopy of tall trees captures most of the sunlight, which is essential for photosynthesis. These towering trees, along with smaller plants on the forest floor, form a rich and diverse layer of producers. They play a critical role in sustaining herbivores—animals that feed directly on plants—such as insects, monkeys, sloths, and birds. These herbivores, in turn, become food for carnivores and omniv</p>
+                  
+                </div>
+    </section>
+
+    <style>
+
+    </style>
+    <section id="primary">
+        <div class="title">
+            <h2 data-aos="fade-up">Primary Consumers</h2>
+            <p style="margin: 30px; line-height: 25px; font-size: 16px;"  data-aos="fade-up" data-aos-delay="100">Primary consumers are animals that feed directly on producers—mainly plants—and form the second level of the food chain in the rainforest. These animals are herbivores, meaning they eat leaves, fruits, seeds, or other plant parts produced by rainforest vegetation. Because they obtain their energy by consuming plants, they play a key role in transferring energy from producers to higher-level consumers like predators.
+<br>    
+                In the rainforest, examples of primary consumers include tapirs, toucans, sloths, and capybaras. These animals depend on the rich plant diversity of the rainforest for their survival. Some, like sloths, feed mainly on leaves high in the canopy, while others, like fruit bats and toucans, eat fruits and nectar. By feeding on plants, they help control vegetation growth and also assist in processes like seed dispersal and pollination, making them essential for the health and balance of the rainforest ecosystem.</p>
+            <style>
+            .title h2 {
+                font-size: 2.5rem; /* Bigger and more bold */
+                font-weight: 800;
+                color: #1B5E20; /* Dark green for an eco-friendly vibe */
+                text-transform: uppercase;
+               margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .item2 img {
+                width: 80%;
+                height: 300px; 
+                
+                object-fit: cover;
+                border-radius: 16px;
+                transition: transform 0.3s ease;
+                }
+
+                .item2:hover .overlay3 {
+                bottom: 0;
+                    }
+
+                    .overlay3 {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  
+  margin-bottom: 10px;
+
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: bottom 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 0 0 16px 16px;
+margin-left: 30px;
+}
+
+.overlay3 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: white;
+}
+            </style>
+        </div>
+        <div class="carousel-wrapper" data-aos="fade-left">
+            <div class="owl-carousel owl-theme">
+                <div class="item2">
+                    <img src="70.jpg" alt="Plant" />
+                    <div class="overlay3">
+                        <h2>Sloth <span class="scientific"></span></h2>
+                    </div>
+                </div>
+                <div class="item2">
+                    <img src="71.jpg" alt="Moss" />
+                    <div class="overlay3">
+                        <h2>Tapir <span class="scientific"></span></h2>
+                      
+                    </div>
+                </div>
+                <div class="item2">
+                    <img src="73.jpg" alt="Tree" />
+                    <div class="overlay3">
+                        <h2>Toucan <span class="scientific"></span></h2>
+                      
+                    </div>
+                </div>
+                <div class="item2">
+                    <img src="72.jpg" alt="Tree" />
+                    <div class="overlay3">
+                        <h2>Capybara <span class="scientific"></span></h2>
+                        
+    
+                    </div>
+                </div>
+               
+                <!-- Add more items as needed -->
+            </div>
+        </div>
+    </section>
+
+
+    <section id="secondary">
+        <div class="title">
+          <h2 data-aos="fade-up">Secondary Consumers</h2>
+          <p style="margin: 50px; line-height: 25px; font-size: 16px; text-align: justify;" data-aos="fade-up" data-aos-delay="100">
+            Secondary consumers are animals that feed on primary consumers, making them carnivores or omnivores in the food chain. They form the third trophic level, right after the herbivores. In the rainforest, where biodiversity is extremely rich, secondary consumers play a vital role in controlling the population of herbivores, which helps maintain the balance of the ecosystem.
+            <br>
+            These animals may eat insects, small mammals, birds, amphibians, or reptiles. Many of them are skilled hunters or opportunistic feeders, using camouflage, speed, or intelligence to catch their prey. Some are both predators and prey, meaning they feed on smaller animals while also being hunted by larger ones.
+          </p>
+        </div>
+      
+        <div class="carousel-wrapper" data-aos="fade-up">
+          <div class="owl-carousel owl-theme">
+            <div class="item3">
+              <img src="75.jpg" alt="Ocelot">
+              <div class="overlay4">
+                <h2>Ocelot</h2>
+              </div>
+            </div>
+            <div class="item3">
+              <img src="90.jpg" alt="Boa Constrictor">
+              <div class="overlay4">
+                <h2>Small Monkeys</h2>
+              </div>
+            </div>
+            <div class="item3">
+              <img src="76.jpg" alt="Harpy Eagle">
+              <div class="overlay4">
+                <h2>Boa Constrictor</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <style>
+      #tertiary .title h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #4E342E;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .item3 img {
+        width: 90%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 16px;
+        margin: auto;
+        margin-top: 20px;
+        transition: transform 0.3s ease;
+      }
+      .item3 {
+        position: relative;
+        overflow: hidden;
+      }
+      .overlay4 {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        transition: bottom 0.3s ease;
+        border-radius: 0 0 16px 16px;
+      }
+      .item3:hover .overlay4 {
+        bottom: 0;
+      }
+      </style>
+      
+      <section id="apex" style="background-color: #c9cfcc; color: rgb(7, 7, 7); padding: 60px 40px;">
+        <div class="apex-grid" data-aos="fade-up">
+      
+          <div class="apex-text">
+            <h2 style="color: #172a18;" data-aos="fade-up">APEX PREDATORS</h2>
+            <p style="margin-top: 20px; line-height: 1.7; text-align: justify;" data-aos="fade-up" data-aos-delay="100">
+              Apex predators are at the top of the rainforest food chain. They have no natural enemies and play a key role in maintaining the health of the ecosystem. By regulating populations of herbivores and smaller carnivores, they help keep biodiversity in balance.
+              <br><br>
+              Jaguars, green anacondas, and black caimans are some of the most powerful apex predators found in the rainforest. Their presence ensures that prey species do not overpopulate and that the food web remains stable.
+            </p>
+          </div>
+      
+       
+          <div class="apex-carousel">
+            <div class="owl-carousel owl-theme">
+              <div class="item4">
+                <img src="81.webp" alt="Jaguar">
+                <div class="overlay5">
+                  <h2>Jaguar</h2>
+                </div>
+              </div>
+              <div class="item4">
+                <img src="82.webp" alt="Green Anaconda">
+                <div class="overlay5">
+                  <h2>Green Anaconda</h2>
+                </div>
+              </div>
+              <div class="item4">
+                <img src="83.jpg" alt="Black Caiman">
+                <div class="overlay5">
+                  <h2>Black Caiman</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <style>
+      .apex-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .apex-text {
+        flex: 1;
+        min-width: 300px;
+        max-width: 600px;
+      }
+      
+      .apex-text h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      
+      .apex-carousel {
+        flex: 1;
+        min-width: 300px;
+        max-width: 800px;
+      }
+      
+      .item4 img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 16px;
+        transition: transform 0.3s ease;
+      }
+      
+      .item4 {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .overlay5 {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        transition: bottom 0.3s ease;
+        border-radius: 0 0 16px 16px;
+      }
+      
+      .item4:hover .overlay5 {
+        bottom: 0;
+      }
+      </style>
+      
+
+      <footer>
+        <p>&copy; 2025 Science Project - Tropical Rainforest</p>
+    </footer>
+<style>
+    footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+</style>
+
+
+
+
+    <script src="thropic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+})
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.services-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2
+            },
+            1024: {
+              slidesPerView: 3
+            }
+          }
+        });
+      </script>
+          <script>
+            document.querySelectorAll('a.scroll').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                  target.scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }
+              });
+            });
+          </script>
+          <!-- AOS Animation Library JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration in ms
+        once: true      // animation only once
+      });
+    </script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

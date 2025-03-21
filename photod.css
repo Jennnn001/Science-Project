@@ -1,0 +1,563 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  overflow-x: hidden;
+}
+.topnav {
+  position: absolute; /* or use 'fixed' if you want it to stay while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  z-index: 1000; 
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgba(252, 252, 252, 0.474);
+  color: rgb(24, 32, 24);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://computerbackgroundimages.com/wp-content/uploads/2020/08/Scenic-View-of-Rainforest-Photo-by-Arnie-Chou-from-Pexels-scaled.jpg') center/cover no-repeat;
+
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  height: 50vh;
+
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.hero-content a{
+    display: inline-block;
+    margin: 0 20px;
+    padding: 10px 18px;
+    background-color: #42404071;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+  
+  .hero-content a:hover {
+    background-color: #2f855a;
+    transform: translateY(-1px);
+    color: white;
+  }
+
+.hero-content p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -10px;
+
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-top: 100px;
+}
+
+.hero button {
+  background: #c7d56ba0;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+.hero button:hover {
+  background: #5b5e5c;
+}
+
+
+.grid-container1 {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.grid-item1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.grid-item1 img {
+  width: 400px;
+  height: 250px;
+  margin-right: 150px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px black;
+}
+
+.grid-item1 p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: rgb(219, 224, 217);
+}
+
+.grid-item1 h2 {
+  font-size: 2.1rem; /* Bigger and more bold */
+      font-weight: 800;
+      color: #c4cbc4; /* Dark green for an eco-friendly vibe */
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      text-align: right;
+  
+}
+
+.grid-item1 h2 span {
+  font-size: 2.1rem; /* Bigger and more bold */
+      font-weight: 800;
+      color: #c4cbc4; /* Dark green for an eco-friendly vibe */
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      text-align: right;
+    
+      border-top: rgb(169, 178, 169) 5px solid;
+      padding-top: 10px;
+}
+
+
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.grid-item2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.grid-item2 img {
+  width: 400px;
+  height: 250px;
+  margin-left: 160px;
+}
+
+.grid-item2 p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.grid-item2 h2 {
+  font-size: 2.1rem; /* Bigger and more bold */
+      font-weight: 800;
+      color: #545a54; /* Dark green for an eco-friendly vibe */
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      text-align: right;
+      padding-top: 0;
+      border-bottom: rgb(51, 63, 51) 5px solid;
+      padding-bottom: 10px;
+}
+
+
+
+/* Swiper scrollbar styling */
+.swiper-scrollbar {
+  margin-top: 15px; /* Moves scrollbar further down */
+  background: rgba(0, 0, 0, 0.1); /* Light background */
+  border-radius: 5px;
+}
+
+/* Swiper slides with enhanced styling */
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: rgb(48 58 44);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  margin-right: 20px; /* Space between slides */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.swiper-slide:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Swiper wrapper with consistent spacing */
+.swiper-wrapper {
+  gap: 40px; /* Ensures consistent spacing */
+}
+
+/* Text styling */
+.text-content {
+  padding: 15px;
+}
+
+.text-content h2 {
+  color: #dddddd;
+  font-size: 1.75rem; /* Slightly larger for better readability */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Add a subtle underline effect */
+.text-content h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #77b96d; /* Accent color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Expand underline on hover */
+.text-content h2:hover::after {
+  width: 100%;
+}
+
+.text-content p {
+  margin-top: 10px;
+  color: #d1d1d1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.number {
+  font-size: 50px;
+  font-weight: 800;
+  color: #f7f7f778;
+}
+
+#def {
+  height: 115vh;
+}
+
+#dg {
+  background-color: #363c35;
+}
+
+
+
+#steps {
+  height: 100vh;
+  background-color: #363c35;
+}
+
+
+
+
+.services-section {
+  background: #2d3e33;
+  height: 50vh;
+  padding: 100px 20px; /* Increase padding to create space */
+  color: white;
+  position: relative; /* Ensure the section acts as a reference */
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute; /* Move freely inside .services-section */
+  top: -50px; /* Move upward to overlap the white and green sections */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  transform: translateY(-250px);
+  text-align: center;
+  color: black;
+  
+}
+
+.tep {
+  border-bottom: #2d3e33 5px solid;
+  padding-bottom: 10px;
+}
+
+
+.service-box {
+  background: rgb(230, 230, 230);
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background: #2d3e33;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.paraf {
+  display: inline-block;
+  background: #2d3e33;
+  color: white;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.paraf:hover {
+  background: #3e5a47;
+}
+
+.ola {
+  color: rgba(75, 74, 74, 0.49);
+  font-weight:800 ;
+  font-size: 50px;
+}
+
+
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services-section1 {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.services-section2 {
+ background: #2d3e33;
+  height: 50vh;
+  padding: 100px 20px; /* Increase padding to create space */
+  color: white;
+  position: relative; /* Ensure the section acts as a reference */
+}
+
+
+.subheading {
+  color: #5cbf77;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.services-grid1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+}
+
+.service-box1 {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.service-box1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.icon-text p {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(179, 178, 178, 0.664);
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-size: 14px;
+  color: #5a9e6c !important; /* greenish */
+  white-space: nowrap;
+  
+}
+
+.icon-text1 p {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(179, 178, 178, 0.664);
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-size: 14px;
+  color: #d86e6e !important; /* greenish */
+  white-space: nowrap;
+  
+}
+
+.service-box1 h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.service-box1 p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.service-box:hover .arrow {
+  color: #5cbf77;
+}
+
+.grid-container5  {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.grid-item5 {
+  gap: 10px;
+}
+
+.grid-item5 p {
+  text-align: justify;
+  margin-left: 20px;
+  line-height: 25px;
+}
+
+.grid-item5 img {
+  width: 90%;
+  height: 75%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+.grid-container6  {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.grid-item6 {
+  gap: 10px;
+}
+
+.grid-item6 p {
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 25px;
+}
+
+.grid-item6 img {
+  width: 90%;
+  height: 75%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
